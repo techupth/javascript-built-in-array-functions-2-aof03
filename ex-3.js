@@ -374,4 +374,13 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const membersPerBill = bills.flatMap(bill => {
+  if (bill.member !== null) {
+    return bill.member.name;
+  } else {
+    return []; 
+  }
+});
+
+console.log(membersPerBill.filter(name => name !== null));
+
