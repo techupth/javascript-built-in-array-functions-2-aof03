@@ -1,7 +1,8 @@
 let crimeRecordNames = ["Theodora Milenko", "Tinashe Benigno", "Mahalia Priyanka", "Maisy Sudhir"];
 
 function searchCrimeRecord(name) {
-  // Start coding here
+  const hasCrimeRecord = crimeRecordNames.some(recordName => recordName === name);
+  return hasCrimeRecord ? name + " has crime record !!!" : name + " has no crime record";
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case

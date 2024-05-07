@@ -374,3 +374,13 @@ const bills = [
 ];
 
 // Start coding here
+function getUniqueMembersCount(bills) {
+  const uniqueMembers = new Set();
+  bills.forEach(bill => {
+    if (bill.member && bill.member.name) { 
+      uniqueMembers.add(bill.member.name);
+    }
+  });
+  return `Unique Members Count: ${uniqueMembers.size}`;
+}
+console.log(getUniqueMembersCount(bills))
